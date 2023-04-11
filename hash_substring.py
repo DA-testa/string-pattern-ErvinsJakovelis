@@ -2,13 +2,16 @@
 
 def read_input():
     i_or_f = input()
-    print(i_or_f)
     if 'F' in i_or_f:
         path = input()
         path = "tests/" + path
         with open(path, "r") as f:
-            return(f.readline().rstrip(), f.readline().rstrip())
-    return (input().rstrip(), input().rstrip())
+            pattern = f.readline()
+            text = f.readline()
+    if 'I' in i_or_f:
+        pattern = input()
+        text = input()
+    return (pattern.rstrip(), text.rstrip())
 
 
 def print_occurrences(output):
