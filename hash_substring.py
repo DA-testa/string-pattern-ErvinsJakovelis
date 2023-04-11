@@ -2,19 +2,15 @@
 
 def read_input():
     i_or_f = input()
-    print(i_or_f)
     if 'I' in i_or_f:
         pattern = input()
         text = input()
-    else:
-        path = input()
-        print(path)
-        path = "tests/" + path
+    if 'F' in i_or_f:
+        path = "tests/06" 
         with open(path, "r") as f:
             pattern = f.readline()
             text = f.readline()
     return (pattern.rstrip(), text.rstrip())
-
 
 def print_occurrences(output):
     # this function should control output, it doesn't need any return
