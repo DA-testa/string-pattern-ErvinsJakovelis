@@ -2,6 +2,7 @@
 
 def read_input():
     i_or_f = input()
+    print(i_or_f)
     if 'F' in i_or_f:
         path = input()
         path = "tests/" + path
