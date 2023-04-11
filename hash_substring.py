@@ -2,11 +2,13 @@
 
 def read_input():
     i_or_f = input()
+    print(i_or_f)
     if 'I' in i_or_f:
         pattern = input()
         text = input()
     else:
         path = input()
+        print(path)
         path = "tests/" + path
         with open(path, "r") as f:
             pattern = f.readline()
