@@ -2,15 +2,15 @@
 
 def read_input():
     i_or_f = input()
-    if 'F' in i_or_f:
+    if 'I' in i_or_f:
+        pattern = input()
+        text = input()
+    else:
         path = input()
         path = "tests/" + path
         with open(path, "r") as f:
             pattern = f.readline()
             text = f.readline()
-    if 'I' in i_or_f:
-        pattern = input()
-        text = input()
     return (pattern.rstrip(), text.rstrip())
 
 
